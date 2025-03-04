@@ -1,14 +1,14 @@
 # 如何使用？
 ## Windows10/11
-安装python(3.5以上版本)，打开cmd运行
+安装python(3.5以上版本)，打开cmd导入库，
 ```
 pip install requests
 ```
-导入库，随后在文件目录下运行
+随后在文件目录下运行
 ```
 python login.py
 ```
-Linux/openwrt
+## Linux/openwrt
 ## 登录
 打开`login.sh`，填入你的账号密码，`User-agent`为自定义登录设备，此处填入浏览器ua即可，默认为`塞班ua`（占用Windows端），完成填写后，直接用Linux终端运行sh即可，**注意：需要系统支持curl**
 
