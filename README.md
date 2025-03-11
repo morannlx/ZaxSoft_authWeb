@@ -1,12 +1,17 @@
+# GVVNU-CONNECT
+广西职业师范学院校园网小助手
+
 # 如何使用？
 ## Windows10/11
+**Windows系统已打包成exe程序，可直接下载运行，下载请前往Release**
+**或者**
 安装python(3.5以上版本)，打开cmd导入库，
 ```
 pip install requests
 ```
 随后在文件目录下运行
 ```
-python login.py
+python login-v2.py
 ```
 ## Linux/openwrt
 ## 登录
