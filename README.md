@@ -4,7 +4,8 @@
 # 如何使用？
 ## Windows10/11
 **Windows系统已打包成exe程序，可直接下载运行，下载请前往Release**
-**或者**
+
+**脚本运行方法：**
 安装python(3.5以上版本)，打开cmd导入库，
 ```
 pip install requests
