@@ -1,5 +1,7 @@
 import requests
-#终端类型
+import json
+
+# 终端类型
 user_agents = {
     '1': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36 Edg/133.0.0.0',
     '2': 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Mobile Safari/537.36 Edg/133.0.0.0'
@@ -44,31 +46,54 @@ def make_post_request(user_id, password, user_agent):
 
         if response.status_code == 200:
             if "密码错误" in response.text:
-                # 返回账号密码填写
                 print("账号或密码错误，请重新登录")
                 return False
-
             elif "auth_success" in response.text:
                 print("成功上线，开始网上冲浪")
                 return True
         else:
             print("网络错误，请检查是否连接校园网")
             return True
-
     except requests.exceptions.RequestException as e:
-
         print(f"Request Error: 网络错误，请检查是否连接校园网")
         return True
 
+def load_config():
+    try:
+        with open("saved_config.json", "r") as f:
+            config = json.load(f)
+            return config
+    except FileNotFoundError:
+        return None
+
+def save_config(config):
+    with open("saved_config.json", "w") as f:
+        json.dump(config, f)
 
 # 脚本入口
 if __name__ == "__main__":
-    while True:
+    config = load_config()
+
+    if config:
+        use_saved_config = input("检测到记忆，是否直接使用？（y/n）")
+        if use_saved_config.lower() == "y":
+            user_id = config["user_id"]
+            password = config["password"]
+            ua_choose = config["ua_choose"]
+        else:
+            user_id = input("输入你的校园网账号: ")
+            password = input("输入你的密码: ")
+            ua_choose = input("模拟设备登录，1为电脑端，2为手机端: ")
+    else:
         user_id = input("输入你的校园网账号: ")
         password = input("输入你的密码: ")
         ua_choose = input("模拟设备登录，1为电脑端，2为手机端: ")
 
-        selected_ua = user_agents.get(ua_choose, user_agents['1'])  # 默认为电脑端
+    selected_ua = user_agents.get(ua_choose, user_agents['1'])  # 默认为电脑端
 
-        if make_post_request(user_id, password, selected_ua):
-            break
+    if make_post_request(user_id, password, selected_ua):
+        save_config({
+            "user_id": user_id,
+            "password": password,
+            "ua_choose": ua_choose
+        })
