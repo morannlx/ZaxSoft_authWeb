@@ -27,3 +27,8 @@ python login-v2.py
 
 # 此脚本的作用？
 可以在没有gui的系统上进行web认证，也可以设置开机自动进行网络认证
+
+
+# 鸣谢
+**各大AI模型**，没有ai参与，本人也写不出gui
+参考项目：()[https://github.com/liuzhijie443/xywpojie-zaxsoft.git]
