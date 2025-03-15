@@ -32,4 +32,4 @@ python login-v2.py
 # 鸣谢
 **各大AI模型**，没有ai参与，本人也写不出gui
 # 参考项目：
-[liuzhijie443/xywpojie-zaxsoft](https://github.com/liuzhijie443/xywpojie-zaxsoft) 
+[liuzhijie443/xywpojie-zaxsoft](https://github.com/liuzhijie443/xywpojie-zaxsoft) :从中获取了后台登录的地址以及方法
