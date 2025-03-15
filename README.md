@@ -31,4 +31,5 @@ python login-v2.py
 
 # 鸣谢
 **各大AI模型**，没有ai参与，本人也写不出gui
-参考项目：[](https://github.com/liuzhijie443/xywpojie-zaxsoft.git)
+# 参考项目：
+[liuzhijie443/xywpojie-zaxsoft](https://github.com/liuzhijie443/xywpojie-zaxsoft) 
