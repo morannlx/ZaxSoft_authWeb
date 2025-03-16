@@ -9,6 +9,7 @@
 安装python(3.5以上版本)，打开cmd导入库，
 ```
 pip install requests
+pip install ttkbootstrap
 ```
 随后在文件目录下运行
 ```
