@@ -11,10 +11,12 @@
 pip install requests
 pip install ttkbootstrap
 ```
-随后在文件目录下运行
+随后将gui.py与code.py放在同一目录下，最后运行gui.py
 ```
-python login-v2.py
+python gui.py
 ```
+
+
 ## Linux/openwrt
 ## 登录
 打开`login.sh`，填入你的账号密码，`User-agent`为自定义登录设备，此处填入浏览器ua即可，默认为`塞班ua`（占用Windows端），完成填写后，直接用Linux终端运行sh即可，**注意：需要系统支持curl**
@@ -29,8 +31,6 @@ python login-v2.py
 # 此脚本的作用？
 可以在没有gui的系统上进行web认证，也可以设置开机自动进行网络认证
 
-
-# 鸣谢
-**各大AI模型**，没有ai参与，本人也写不出gui
+本项目部分代码由ai参与编写
 # 参考项目：
 [liuzhijie443/xywpojie-zaxsoft](https://github.com/liuzhijie443/xywpojie-zaxsoft) :从中获取了后台登录的地址以及方法
