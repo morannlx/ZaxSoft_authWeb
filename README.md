@@ -1,5 +1,5 @@
 # GVVNU-CONNECT
-广西职业师范学院校园网小助手
+广西职业师范学院校园网小助手----基于AI的一坨shit
 
 # 如何使用？
 ## Windows10/11
@@ -31,6 +31,6 @@ python gui.py
 # 此脚本的作用？
 可以在没有gui的系统上进行web认证，也可以设置开机自动进行网络认证
 
-本项目部分代码由ai参与编写
+本项目代码由ai参与编写
 # 参考项目：
 [liuzhijie443/xywpojie-zaxsoft](https://github.com/liuzhijie443/xywpojie-zaxsoft) :从中获取了后台登录的地址以及方法
